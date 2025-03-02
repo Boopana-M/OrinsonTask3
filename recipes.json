@@ -1,0 +1,29 @@
+[
+    {
+        "id": 1,
+        "name": "Pancakes",
+        "description": "Fluffy homemade pancakes.",
+        "image": "images folder/pancake.jpeg",
+        "category": "breakfast",
+        "ingredients": ["Flour", "Milk", "Eggs", "Baking Powder"],
+        "instructions": "Mix ingredients and cook on a pan."
+    },
+    {
+        "id": 2,
+        "name": "Spaghetti",
+        "description": "Classic Italian pasta dish.",
+        "image": "images folder/spaghetti.jpeg",
+        "category": "lunch",
+        "ingredients": ["Pasta", "Tomato Sauce", "Garlic"],
+        "instructions": "Boil pasta and mix with sauce."
+    },
+    {
+        "id": 3,
+        "name": "Chocolate Cake",
+        "description": "Delicious homemade chocolate cake.",
+        "image": "images folder/chocolate_cake.jpeg",
+        "category": "dessert",
+        "ingredients": ["Flour", "Cocoa Powder", "Sugar", "Eggs"],
+        "instructions": "Mix ingredients and bake at 350°F for 30 minutes."
+    }
+]

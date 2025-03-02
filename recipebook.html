@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe Book</title>
+    <link rel="stylesheet" href="recipestyles.css">
+</head>
+<body>
+    <header>
+        <h1>Recipe Book 👨‍🍳📒</h1>
+        <input type="text" id="search" placeholder="Search recipes...">
+    </header>
+    
+    <nav>
+        <button class="filter" data-category="all">All</button>
+        <button class="filter" data-category="breakfast">Breakfast🍽️</button>
+        <button class="filter" data-category="lunch">Lunch🥘</button>
+        <button class="filter" data-category="dessert">Dessert🍮</button>
+    </nav>
+    
+    <main id="recipe-list"></main>
+
+    <script src="recipescript.js"></script>
+</body>
+</html>

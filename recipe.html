@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe Details</title>
+    <link rel="stylesheet" href="recipestyles.css">
+</head>
+<body>
+    <button onclick="goBack()">⬅ Back</button>
+    <div id="recipe-details"></div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const recipeDetails = document.getElementById("recipe-details");
+            const params = new URLSearchParams(window.location.search);
+            const recipeId = params.get("id");
+
+            if (recipeId) {
+                fetch("recipes.json")
+                    .then(response => response.json())
+                    .then(data => {
+                        const recipe = data.find(r => r.id === parseInt(recipeId));
+                        if (recipe) {
+                            recipeDetails.innerHTML = `
+                                <h1>${recipe.name}</h1>
+                                <img src="${recipe.image}" alt="${recipe.name}">
+                                <h3>Ingredients:</h3>
+                                <ul>${recipe.ingredients.map(ing => `<li>${ing}</li>`).join('')}</ul>
+                                <h3>Instructions:</h3>
+                                <p>${recipe.instructions}</p>
+                            `;
+                        } else {
+                            recipeDetails.innerHTML = `<p>Recipe not found!</p>`;
+                        }
+                    });
+            }
+        });
+
+        function goBack() {
+            window.history.back();
+        }
+    </script>
+</body>
+</html>
